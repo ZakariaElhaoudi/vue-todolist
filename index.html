@@ -15,7 +15,7 @@
             <span id="text-logo">To-Do List</span>
         </header>
         <div id="container">
-            <input type="text" name="" id="" v-model="newTask" placeholder="Inserire Todolist">
+            <input type="text"id="" v-model="newTask" @keyup.enter="aggiungiTask" placeholder="Inserire Todolist">
             <button class="button" @click="aggiungiTask">Aggiungi</button>
             <div>
                 <h1>To-Do List</h1>
@@ -23,7 +23,7 @@
                   <li v-for="task in tasks" 
                   :class="task.done === true ? 'line' : ''">
                     <span>{{task.text}}</span>
-                    <i class="fa-solid fa-x"></i>
+                    <i class="fa-solid fa-x" @click="rimuovereTask(index)"></i>
                   </li>
                 </ul>
             </div>
