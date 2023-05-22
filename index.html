@@ -15,12 +15,13 @@
             <span id="text-logo">To-Do List</span>
         </header>
         <div id="container">
-            <input type="text" name="" id="" v-model="message" placeholder="Inserire Todolist">
-            <button class="button">Aggiungi</button>
+            <input type="text" name="" id="" v-model="newTask" placeholder="Inserire Todolist">
+            <button class="button" @click="aggiungiTask">Aggiungi</button>
             <div>
                 <h1>To-Do List</h1>
                 <ul>
-                  <li v-for="task in tasks" >
+                  <li v-for="task in tasks" 
+                  :class="task.done === true ? 'line' : ''">
                     <span>{{task.text}}</span>
                     <i class="fa-solid fa-x"></i>
                   </li>

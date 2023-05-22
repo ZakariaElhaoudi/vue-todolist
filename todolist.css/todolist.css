@@ -68,3 +68,7 @@ header{
     margin-right: 10px;
 }
 
+.line {
+    text-decoration: line-through;
+    
+}

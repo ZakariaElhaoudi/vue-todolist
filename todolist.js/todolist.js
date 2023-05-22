@@ -18,18 +18,27 @@ const{ createApp } = Vue;
 createApp({
     data() {
         return {
-            message:'',
-            tasks: [
+            newTask:'',
+            tasks: [ //oggetto, formato da due proprietà: text, una stringa che indica il testo del task done, un booleano (true/false)
                 { text: 'Fare la spesa', 
                   done: false 
                 },
                 { text: 'Studiare', 
-                  done: false
+                  done: true
                 },
                 { text: 'Pulire la casa', 
                   done: false 
                 }
               ],  
+        }
+    },
+    methods: {
+        aggiungiTask() {
+            if (this.newTask !== '') {
+                this.tasks.unshift({text: this.newTask});
+            }
+            
+            this.newTask = '';
         }
     }
 }).mount('#app')
