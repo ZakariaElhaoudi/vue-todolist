@@ -1,0 +1,70 @@
+/* regole generali pagina  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* regole header  */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+
+} 
+
+#img{
+    width: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+
+
+}
+
+#text-logo{
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+    vertical-align: middle;
+    
+}
+
+/* regole container  */
+#container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    border: solid 2px lightgrey;
+    border-radius: 20px 20px;
+    height: 30px;
+    width: 100px;
+    
+}
+
+#container li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 20px;
+    background-color: lightgrey;
+    border-bottom: solid 2px black;
+}
+
+#container input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    min-width: 300px;
+    margin-right: 10px;
+}
+
