@@ -20,9 +20,9 @@
             <div>
                 <h1>To-Do List</h1>
                 <ul>
-                  <li v-for="task in tasks" 
-                  :class="task.done === true ? 'line' : ''">
-                    <span>{{task.text}}</span>
+                  <li v-for="(task, index) in tasks" 
+                  >
+                    <span :class="task.done === true ? 'line' : ''" @click="aggiungiDone(task)">{{task.text}}</span>
                     <i class="fa-solid fa-x" @click="rimuovereTask(index)"></i>
                   </li>
                 </ul>
